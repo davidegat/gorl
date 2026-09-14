@@ -189,15 +189,16 @@ Programmer settings:
 - 1942
 - A1 Spirit
 - Adventure Kid
-- Aladdin
-- Alex Kid
+- Aleste
+- Alex Kid In Miracle World
 - Alibaba And 40 Thieves
+- Androgynous
 - Antarctic Adventure
 - Arkanoid 2
 - Arkanoid
 - Athletic Land
-- Beamrider
-- Blagger
+- Back To The Future
+- Bitlogic
 - Block Hole
 - Bomb Jack
 - Booty
@@ -220,7 +221,6 @@ Programmer settings:
 - Congo Bongo
 - Crusader
 - Decathlon
-- Deep Forest
 - Dig Dug
 - Doki Doki Penguin Land
 - Donkey Kong
@@ -228,8 +228,12 @@ Programmer settings:
 - Door Door mkII
 - Dorodon
 - Double Dragon
+- Dragon Slayer 2
 - Dragon Quest 1
 - Dragon Slayer 1
+- Dunk Shot
+- Eddy 2
+- Eggerland Mystery 2
 - Eggerland
 - Elevator Action
 - Elite
@@ -243,8 +247,10 @@ Programmer settings:
 - Galaxian
 - Ghostbusters
 - Gradius
+- Graphic Master
 - Green Beret
 - Grog's Revenge
+- Gryzor
 - Guardic
 - Gulkave
 - Gyrodine
@@ -257,14 +263,16 @@ Programmer settings:
 - Hyper Sports 1
 - Hyper Sports 2
 - Hyper Sports 3
+- Ikari
 - Jack The Nipper
 - Jet Bomber
 - Jet Set Willy
 - Joe Blade
 - Jungle Hunt
-- Jungle Hunt
 - Juno First
+- Karamaru
 - King's Valley 1
+- Knightmare 2
 - Knight Lore
 - Knightmare
 - Konami's Baseball
@@ -276,13 +284,16 @@ Programmer settings:
 - Kung-Fu Master
 - Lode Runner
 - Magical Tree
+- Manbow 2
 - Manic Miner
 - Mappy
+- Metal Gear
+- Metal Gear 2
+- Mobile Planet Suthirus
 - Monkey Academy
 - Moon Patrol
 - Mopiranger
 - Nemesis 1
-- Nemesis 2
 - New Bubble Bobble
 - Night Shade
 - Ninja Jajamaru Kun
@@ -292,6 +303,7 @@ Programmer settings:
 - Oil's Well
 - Operation Wolf
 - Othello
+- Outrun
 - Pac-Man
 - Parodius
 - Penguin Adventure
@@ -303,7 +315,7 @@ Programmer settings:
 - Pooyan
 - Pyramid Warp
 - Q-Bert
-- R-Type
+- Quarth
 - Racing v1.0
 - Raid On Bungeling Bay
 - Rambo
@@ -319,8 +331,10 @@ Programmer settings:
 - Sorcery
 - Space Camp
 - Space Invaders
+- Space Manbow
 - Spelunker
 - Star Force
+- Star Virgin
 - Streetfighter
 - Super Boy II
 - Super Boy I
@@ -339,13 +353,14 @@ Programmer settings:
 - Time Pilot
 - Tutankham
 - Twinbee
-- Twinbee
 - Valkyr
+- Vampire Killer
 - Vaxol
 - Victorious Nine 2
 - Volguard
 - Warroid
 - Who Dares Wins
+- Xevious
 - Xevious Micro
 - Xyzolog
 - Yie Ar Kung-Fu II
@@ -354,3 +369,4 @@ Programmer settings:
 - Zaxxon
 - Zexas
 - Zippy Race
+- Zombie Hunter
