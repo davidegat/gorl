@@ -2,6 +2,8 @@
 
 GORL is an MSX ROM launcher for the OneChipBook. It scans the SD card, shows the available games in a menu, and launches compatible ROM images directly from the SD card.
 
+Current documented build: **GORL Build153**.
+
 ## Tested hardware
 
 Tested on the **OneChipBook-12**:
@@ -15,12 +17,22 @@ Tested on the **OneChipBook-12**:
 
 ## ROM support
 
-GORL supports:
+The following ROM paths are actually supported and have been exercised by GORL:
 
-- plain **8 KiB**, **16 KiB** and **32 KiB** ROMs
-- compatible software-mapped ROMs up to **1 MiB**
+- fixed/linear **8 KiB** ROMs
+- fixed/linear **16 KiB** ROMs
+- fixed/linear **32 KiB** ROMs
+- fixed/linear **48 KiB** ROMs
+- bank-switched MegaROMs using the supported mapper paths:
+  - **Konami**
+  - **Konami SCC**
+  - **ASCII8**
+  - **ASCII16**
+- compatible bank-switched images up to **1 MiB**, depending on mapper and ROM behaviour
 
-**64 KiB ROMs do not work and are intentionally rejected by the launcher.**
+Compatibility is based on the ROM layout/mapper, not only on file size. A large ROM is therefore not automatically supported just because another ROM of the same size works.
+
+**Plain/fixed 64 KiB ROMs are not supported.** Bank-switched ROMs are handled through their mapper path instead.
 
 Place ROM files in:
 
@@ -28,12 +40,35 @@ Place ROM files in:
 /ROMS
 ```
 
-Supported filename extensions are:
+Filename extensions recognized by the launcher/tools are:
 
 ```text
 .ROM  .SCC  .A8  .A16  .D2R
 ```
 
+Mapper-oriented extensions can be used for the corresponding ROM families (`.SCC`, `.A8`, `.A16`). `.D2R` is still recognized by the preparation tools, but **D2R execution is experimental and is not currently considered supported**.
+
+The tested-title list at the end of this README is the best indication of real-world compatibility. Some unusual ROMs may still require loader-specific handling.
+
+## Menu music and hotkeys
+
+Build153 includes PSG background music in the GORL menu.
+
+- Press **F1** to toggle menu music **ON/OFF**.
+- Turning the music off silences the PSG without restarting the track.
+- Pressing **F1** again resumes playback from the same position.
+- Music playback remains timed while menu pages are redrawn, avoiding the pause that occurred on earlier builds during page changes.
+
+The menu displays the hotkeys in this form:
+
+```text
+   HotKeys:
+             --> [  F1  ] Music ON/OFF
+             --> [CTRL+D] Quit to SD
+             --> [ FN+R ] Back to GORL
+```
+
+`CTRL+D` exits GORL to the bootable SD/MSX-DOS environment. `FN+R` returns from a launched game to GORL using the OneChipBook reset/hotkey path.
 
 ## `gametitles.txt`
 
@@ -57,10 +92,10 @@ The first field must exactly match the ROM filename. Everything after the first 
 
 The ROM preparation tool described below creates and maintains this file automatically. It is supplied in Python, Bash and Windows BAT versions. On every run it:
 
-1. keep titles that already belong to ROMs still present;
-2. ask only for titles that are missing;
-3. remove obsolete entries whose ROM is no longer present;
-4. rewrite `gametitles.txt` so it matches the current contents of the directory.
+1. keeps titles that already belong to ROMs still present;
+2. asks only for titles that are missing;
+3. removes obsolete entries whose ROM is no longer present;
+4. rewrites `gametitles.txt` so it matches the current contents of the directory.
 
 If a ROM is deleted from `/ROMS`, its line is automatically removed from `gametitles.txt` the next time the tool is run. If no ROMs remain, `gametitles.txt` is emptied.
 
