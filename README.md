@@ -54,6 +54,8 @@ The tested-title list at the end of this README is the best indication of real-w
 
 Build153 includes PSG background music in the GORL menu.
 
+The background music is a PSG adaptation of **“Naruto - MoonDriver Demo 3”**, sourced from the [OPL Archive](https://opl.wafflenet.com/).
+
 - Press **F1** to toggle menu music **ON/OFF**.
 - Turning the music off silences the PSG without restarting the track.
 - Pressing **F1** again resumes playback from the same position.
